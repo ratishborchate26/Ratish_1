@@ -3,46 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Html Semantic Page</title>
+    <link rel="stylesheet" href="../Assets/style.css">
 </head>
 <body>
-    <h1 style="margin-left:50px; color:#1a237e;">Registration Form</h1>
-    <form action="" style ="display:flex ; flex-direction:column; width:300px; margin:0; gap:10px; margin-top:50px; margin-left:50px;">
-
-        <div style="margin: 25px;"><input type="text" placeholder="Enter full name"></div>
-
-        <div style="margin: 25px;"><input type="text" placeholder="Enter username"></div>
-
-        <div style="margin: 25px;"><input type="Password" placeholder="Enter password"></div>
-
-        <div style="margin: 25px;"><input type="Email" placeholder="Enter email"></div>
-
-        <div style="margin: 25px;"><input type="phone Number" placeholder="Enter phone number"></div>
-
-        <div style="margin: 25px;"><input type="date" placeholder="Enter DOB"></div>
-
-        <div style="margin: 25px;"><input type="time" placeholder="Enter registration time"></div>
-
-        <div style="margin: 25px;"><input type="Age" placeholder="Enter age"></div>
-
-        <h3 style="margin-left: 25px; color: black;">Skill Level</h3>
-
-        <div style="margin: 25px;">
-            <input type="range" min="0" max="100" value="50" style="width:100%;">
+    <header> 
+    
+        <div class="Navbar">
+            <h1>My HTML5 webpage</h1>
+            <p>Using semantic Elements</p>
+        </div>
+        <div class="Navbar2">
+            <ul>
+                <li>Home</li>
+                <li>Article</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
         </div>
 
-        <div style="margin: 25px;">
-            <label>Gender: </label>
-            <input type="radio" name="gender" value="Male"> Male
-            <input type="radio" name="gender" value="Female"> Female
-        </div>
 
-        <div style="margin: 25px; display: flex; gap: 10px;">
-            <button type="submit" style="padding: 10px 20px; cursor: pointer;">Submit</button>
-            <button type="reset" style="padding: 10px 20px; cursor: pointer;">Reset</button>
-            <button type="button" style="padding: 10px 20px; cursor: pointer;">Cancel</button>
-        </div>
+</header>
 
-    </form>
+<div class="container">
+    <main>
+        <article>
+            <h2>Main Article</h2>
+            <p>This is the main article content Html5 semantic elements help define the structure of a webpage clearly.</p>
+        </article>
 
+        <section>
+            <h3>Article Section</h3>
+            <p>This section is a part of the article section are used to group related content.</p>
+        </section>
+
+        <section>
+            <h3>Another Section</h3>
+            <p>You can have multiple sections inside an article.each with own heading</p>
+        </section>
+    </main>
+
+    <aside class="sidebar">
+        <h3>Sidebar</h3>
+        <p>This is an aside element. It contains related
+            information like links or advertisements.
+        </p>
+    </aside>
+</div>
+
+<footer>
+    <p>&copy; 2026 My Website. All rights reserved.</p>
+
+</footer>
+
+     
+</body>
 </html>
