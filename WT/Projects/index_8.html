@@ -9,12 +9,12 @@
     <script>
 
         function greetUser(name, callback) {
-            console.log("Hello, " + name + "!");
+            document.write("<br>Hello, " + name + "!");
             callback();
         }
 
         function askQuestion() {
-            console.log("How are you today?");
+            document.write("<br>How are you today?");
         }
 
         greetUser("Alice", askQuestion);
