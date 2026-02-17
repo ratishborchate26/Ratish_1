@@ -14,19 +14,19 @@
             age: 25
         };
         
-    document.write("User Information:");
-    document.write("<br>Name: " + user.name);
-    document.write("<br>Age: " + user.age);
+    console.log("User Information:");
+    console.log("<br>Name: " + user.name);
+    console.log("<br>Age: " + user.age);
     if (isAdmin) {
-        document.write("<br>" + user.name + " has admin access.");
+        console.log("<br>" + user.name + " has admin access.");
     } else {
-        document.write("<br>" + user.name + " is a regular user.");
+        console.log("<br>" + user.name + " is a regular user.");
     }
 
     if (age >= 18) {
-        document.write("<br>" + user.name + " is an adult.");
+        console.log("<br>" + user.name + " is an adult.");
     } else {
-        document.write("<br>" + user.name + " is a minor.");
+        console.log("<br>" + user.name + " is a minor.");
     }
     </script>
     
