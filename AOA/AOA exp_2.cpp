@@ -1,30 +1,63 @@
 #include <stdio.h>
 
-int main()
+int partition(int a[], int low, int high)
 {
-    int n,i,l=0,r,mid,key;
-    printf("Enter number of elements: ");
-    scanf("%d",&n);
-    int a[n];
-    printf("Enter elements in sorted order:\n");
-    for(i=0;i<n;i++) 
-	scanf("%d",&a[i]);
-    printf("Enter element to search: ");
-    scanf("%d",&key);
-    r=n-1;
-    while(l<=r)
+    int pivot = a[high];
+    int i = low - 1;
+    int j;
+
+    for (j = low; j < high; j++)
     {
-        mid=(l+r)/2;
-        if(a[mid]==key)
+        if (a[j] < pivot)
         {
-            printf("Element found at position %d",mid+1);
-            return 0;
+            i++;
+            int t = a[i];
+            a[i] = a[j];
+            a[j] = t;
         }
-        else if(a[mid]<key)
-            l=mid+1;
-        else
-            r=mid-1;
     }
-    printf("Element not found");
+
+    int t = a[i + 1];
+    a[i + 1] = a[high];
+    a[high] = t;
+
+    return i + 1;
 }
 
+void quickSort(int a[], int low, int high)
+{
+    if (low < high)
+    {
+        int p = partition(a, low, high);
+
+        quickSort(a, low, p - 1);
+        quickSort(a, p + 1, high);
+    }
+}
+
+int main()
+{
+    int n;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    int a[n];
+    int i;
+
+    printf("Enter elements:\n");
+    for (i = 0; i < n; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+
+    quickSort(a, 0, n - 1);
+
+    printf("Sorted array:\n");
+    for (i = 0; i < n; i++)
+    {
+        printf("%d ", a[i]);
+    }
+
+    return 0;
+}
